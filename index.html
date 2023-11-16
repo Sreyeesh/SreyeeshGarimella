@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <a href="index.html">
+            <img src="assets/SGLogo.png" alt="SG Logo" class="navbar-logo">
+        </a>
+        <a href="#about-me">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact Me</a>
+        <div class="hamburger">&#9776;</div>
+    </nav>
+    
+    
+    
+
+    <!-- About Me Section -->
+    <section id="about-me">
+        <div class="about-me-content">
+            <div class="about-me-image">
+                <img src="assets/sgarimellaprofile.jpg" alt="Sreyeesh Garimella">
+                <!-- Social Icons with Font Awesome -->
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/sreyeeshgarimella" target="_blank" title="Linkedin">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Sreyeesh" target="_blank" title="Github Profile">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="assets/Sreyeesh_Garimella_DevOps.pdf" download="YourName_Resume.pdf" title="Download CV">
+                        <i class="fas fa-file-pdf"></i> <!-- This is the Font Awesome icon for a PDF file --></a>
+                </div>
+            </div>
+
+            <div class="about-me-text">
+                <h2>About Me</h2>
+                <p>I am a developer passionate about creating innovative solutions. With skills in various technologies, I strive to build applications that make a difference.</p>
+                
+        </div>
+    </section>
+
+<!-- Projects Section -->
+<section id="projects">
+    <!-- Example Project 1 -->
+    <!-- <div class="project-tile">
+        <img src="path-to-your-project1-image.jpg" alt="Project 1">
+        <h3>Project 1</h3>
+        <p>Description of Project 1.</p>
+        <a href="https://example.com/project1" target="_blank">View Project</a>
+    </div> -->
+    
+    <!-- Example Project 2
+    <div class="project-tile">
+        <img src="path-to-your-project2-image.jpg" alt="Project 2">
+        <h3>Project 2</h3>
+        <p>Description of Project 2.</p>
+        <a href="https://example.com/project2" target="_blank">View Project</a>
+    </div> -->
+
+    <!-- Example Project 3 -->
+    <div class="project-tile">
+        <img src="assets/BookStore_CLI.png" alt="Project 3">
+        <h3>BookStore-CLI</h3>
+        <p>This Book Store System is a simple, console-based Python application for managing a collection of books. It allows users to add, list, mark books as read, and delete books. Additionally, it includes functionality to save the book collection to a file and load it, ensuring data persistence.</p>
+        <a href="https://github.com/Sreyeesh/BookStore-CLI" target="_blank">View Project</a>
+    </div>
+
+    <!-- Additional projects if you have them -->
+
+    <!-- Movie Maker CLI Project -->
+    <div class="project-tile">
+        <img src="assets/MovieTrackerPython.png" alt="Movie Maker CLI">
+        <h3>Movie Tracker CLI</h3>
+        <p>A command-line interface tool for creating personalized movie suggestions.</p>
+        <a href="https://replit.com/@sreyeeshgarimel/Movie-Maker-CLI" target="_blank">View Project</a>
+    </div>
+
+    <!-- Technical Documentation Page Project -->
+    <div class="project-tile">
+        <img src="assets/TechnicalDocumentation.png">
+        <h3>Technical Documentation</h3>
+        <p>An example of a technical documentation page, showcasing my documentation skills.</p>
+        <a href="https://sreyeesh.github.io/Technical-Documentation/" target="_blank">View Project</a>
+    </div>
+
+    <!-- Linus Tribute Page Project -->
+    <div class="project-tile">
+        <img src="assets/LinusTributePage.png" alt="Linus Tribute Page">
+        <h3>Linus Tribute Page</h3>
+        <p>A tribute page dedicated to Linus Torvalds, showcasing my design and layout skills.</p>
+        <a href="https://sreyeesh.github.io/linus-tribute-page/" target="_blank">View Project</a>
+    </div>
+</section>
+
+
+
+
+<!-- Contact Me Section -->
+<!-- modify this form HTML and place wherever you want your form -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/mzblqvkl" method="POST">
+        <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+        </div>
+
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+
+
+
+<footer>
+    <div class="footer-content">
+        <img src="assets/SGLogo.png" alt="SG Logo" class="footer-logo">
+        <p>&copy; 2023 Sreyeesh Garimella All rights reserved.</p>
+        <!-- Add any additional footer content here -->
+    </div>
+</footer>
+
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
