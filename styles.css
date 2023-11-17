@@ -106,18 +106,27 @@ body {
 }
 
 /* Responsive Navbar Adjustments for Mobile View */
+/* ... existing styles ... */
+
+/* Responsive Navbar Adjustments for Mobile View */
 @media (max-width: 768px) {
     #navbar {
         justify-content: space-between; /* Adjust space between elements */
     }
+    
     .navbar-logo {
-        order: 2; /* Moves the logo to the right */
-        margin-left: auto; /* Pushes the logo to the far right */
-        margin-right: 0; /* Remove right margin */
+        order: 1; /* Ensures logo is on the left */
+        margin-right: auto; /* Pushes everything else to the far right */
     }
+
     .hamburger {
-        order: 1; /* Ensures hamburger menu is on the left */
+        order: 3; /* Ensures hamburger menu is on the right */
         display: block; /* Show the hamburger icon */
+    }
+
+    /* Adjust the first navbar link margin for additional space */
+    #navbar a:first-child {
+        margin-left: 20px; /* Increase left margin of the first link */
     }
 
     #navbar a {
@@ -131,6 +140,7 @@ body {
     }
 }
 
+/* ... remaining styles ... */
 
 
 /* About Me Section */
