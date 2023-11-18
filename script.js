@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Hamburger menu functionality
     var hamburger = document.querySelector('#navbar .hamburger');
     var menuItems = document.querySelectorAll('#navbar a');
 
@@ -19,17 +20,64 @@ document.addEventListener('DOMContentLoaded', function() {
     // Adjust menu visibility based on window width
     function adjustMenuForWindowSize() {
         if (window.innerWidth > 768) {
-            // Show menu items in full page view
-            toggleMenuItems('block');
+            toggleMenuItems('block'); // Show menu items in full page view
         } else {
-            // Hide menu items in mobile view
-            toggleMenuItems('none');
+            toggleMenuItems('none'); // Hide menu items in mobile view
         }
     }
 
-    // Call adjustMenuForWindowSize on window resize
     window.addEventListener('resize', adjustMenuForWindowSize);
+    adjustMenuForWindowSize(); // Initial adjustment on page load
 
-    // Initial adjustment on page load
-    adjustMenuForWindowSize();
+    // Fetching and displaying projects and skills
+    fetch('contents.json')
+        .then(response => response.json())
+        .then(data => {
+            const projectsContainer = document.getElementById('projects-container');
+            if (projectsContainer && data.projects) {
+                data.projects.forEach(project => {
+                    const projectElement = document.createElement('div');
+                    projectElement.className = 'project-tile';
+                    projectElement.innerHTML = `
+                        <img src="${project.image}" alt="${project.title}">
+                        <h3>${project.title}</h3>
+                        <p>${project.description}</p>
+                        <a href="${project.link}" target="_blank">View Project</a>
+                    `;
+                    projectsContainer.appendChild(projectElement);
+                });
+            }
+
+            // Dynamically load the Skills section with Font Awesome icons
+            const skillsContainer = document.getElementById('skills-container');
+            if (skillsContainer && data.skills) {
+                data.skills.forEach(skill => {
+                    const skillElement = document.createElement('div');
+                    skillElement.className = 'skill-item';
+
+                    const iconElement = document.createElement('i');
+                    iconElement.className = skill.iconClass; // Font Awesome class
+
+                    const skillName = document.createTextNode(` ${skill.name}`);
+                    
+                    skillElement.appendChild(iconElement);
+                    skillElement.appendChild(skillName);
+                    skillsContainer.appendChild(skillElement);
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error loading content:', error);
+        });
 });
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+

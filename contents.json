@@ -1,0 +1,74 @@
+{
+  "projects": [
+      {
+          "title": "BookStore-CLI",
+          "description": "A console-based Python application for managing a collection of books. It allows users to add, list, mark books as read, and delete books.",
+          "image": "/assets/BookStore_CLI.png",
+          "link": "https://github.com/sreyeesh/BookStore-CLI"
+      },
+      {
+          "title": "Movie Tracker CLI",
+          "description": "A command-line interface tool for creating personalized movie suggestions.",
+          "image": "/assets/MovieTrackerPython.png",
+          "link": "https://github.com/Sreyeesh/Movie-Tracker-CLI"
+      },
+      {
+          "title": "Technical Documentation Page",
+          "description": "A technical documentation page, showcasing documentation skills and design layout.",
+          "image": "/assets/TechnicalDocumentation.png",
+          "link": "https://github.com/sreyeesh/Technical-Documentation"
+      },
+      {
+          "title": "Linus Tribute Page",
+          "description": "A tribute page dedicated to Linus Torvalds, showcasing design and layout skills.",
+          "image": "/assets/LinusTributePage.png",
+          "link": "https://github.com/sreyeesh/Linus-Tribute-Page"
+      }
+  ],
+  "skills": [
+      {
+          "name": "Python",
+          "iconClass": "fab fa-python"
+      },
+      {
+          "name": "JavaScript",
+          "iconClass": "fab fa-js-square"
+      },
+      {
+          "name": "HTML",
+          "iconClass": "fab fa-html5"
+      },
+      {
+          "name": "CSS",
+          "iconClass": "fab fa-css3-alt"
+      },
+      {
+          "name": "React",
+          "iconClass": "fab fa-react"
+      },
+      {
+          "name": "Docker",
+          "iconClass": "fab fa-docker"
+      },
+      {
+          "name": "Kubernetes",
+          "iconClass": "fab fa-kubernetes"
+      },
+      {
+          "name": "AWS",
+          "iconClass": "fab fa-aws"
+      },
+      {
+          "name": "Ansible",
+          "iconClass": "fas fa-server" 
+      },
+      {
+          "name": "Linux Administration",
+          "iconClass": "fab fa-linux"
+      },
+      {
+          "name": "Bash Scripting",
+          "iconClass": "fas fa-terminal" 
+      }
+  ]
+}
