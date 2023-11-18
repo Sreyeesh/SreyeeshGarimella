@@ -3,25 +3,25 @@
       {
           "title": "BookStore-CLI",
           "description": "A console-based Python application for managing a collection of books. It allows users to add, list, mark books as read, and delete books.",
-          "image": "/assets/BookStore_CLI.png",
+          "image": "assets/BookStore_CLI.png",
           "link": "https://github.com/sreyeesh/BookStore-CLI"
       },
       {
           "title": "Movie Tracker CLI",
           "description": "A command-line interface tool for creating personalized movie suggestions.",
-          "image": "/assets/MovieTrackerPython.png",
+          "image": "assets/MovieTrackerPython.png",
           "link": "https://github.com/Sreyeesh/Movie-Tracker-CLI"
       },
       {
           "title": "Technical Documentation Page",
           "description": "A technical documentation page, showcasing documentation skills and design layout.",
-          "image": "/assets/TechnicalDocumentation.png",
+          "image": "assets/TechnicalDocumentation.png",
           "link": "https://github.com/sreyeesh/Technical-Documentation"
       },
       {
           "title": "Linus Tribute Page",
           "description": "A tribute page dedicated to Linus Torvalds, showcasing design and layout skills.",
-          "image": "/assets/LinusTributePage.png",
+          "image": "assets/LinusTributePage.png",
           "link": "https://github.com/sreyeesh/Linus-Tribute-Page"
       }
   ],
