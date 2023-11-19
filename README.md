@@ -2,7 +2,7 @@
 
 # Portfolio Website
 
-![Portfolio Website Preview](assets/PortfolioScreenShot.png)
+![Portfolio Website Preview](assets/UpdatedReadMeImg.png)
 
 This is a simple and clean portfolio website template that  I made. It allows me to showcase my skills, projects, and provide way for people to contact me. The website is designed to help me have a professional online presence and share my work with others.
 

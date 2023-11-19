@@ -89,65 +89,68 @@ body {
     }
 }
 
-/* About Me Section */
 #about-me {
     display: flex;
+    padding-top:100px;
+    margin-top:100px;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
     text-align: center;
-    padding: 40px;
-    background-color: #f4f4f4;
-    margin-top: 70px; /* Offset for the fixed navbar */
-    opacity: 0; /* Start with the section being invisible */
-    animation: fadeIn 5s ease-out forwards; /* Apply the fade-in animation */
-}
-
-/* About Me Section */
-.about-me-content img {
-    width: 200px; /* Adjust the size as needed */
-    height: 200px;
-    border-radius: 50%; /* Keeps the circular shape */
-    object-fit: cover; /* Ensures the image covers the area */
-    border: none; /* Removes the border */
-    /* If there are any additional styles like box-shadow, you can remove them here as well */
-}
-#about-me p {
-    font-size: 1.2rem; /* Adjust the font size to your preference */
-    line-height: 1.6; /* Good for readability */
-    color: #333; /* Adjust color to match your site */
-    text-align: justify; /* For a more "block of text" feel, like in books or blogs */
-    margin-bottom: 20px; /* Space before the social icons */
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* Optional: subtle text shadow for depth */
-    max-width: 600px; /* Contain the width of paragraphs for better readability */
-    margin-left: auto; /* Centering the paragraph block */
-    margin-right: auto;
-}
-
-#about-me .social-icons a {
-    color: #007bff; /* Icon color */
-    font-size: 30px; /* Increase the font size for larger icons */
-    transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
-    text-decoration: none; /* Remove underline */
-}
-
-#about-me .social-icons a:hover {
-    color: #0056b3; /* Darker shade on hover */
-    transform: scale(1.15); /* Slightly enlarge icons on hover */
-    text-decoration: none; /* Ensure underline doesn't reappear on hover */
-}
-
-
-/* Keyframes for fade-in animation */
-@keyframes fadeIn {
-    to {
-        opacity: 1; /* Animate to fully visible */
+    /* padding: 20px; */
+  }
+  
+  .about-me-content {
+    display: flex;
+    flex-direction: row; /* Aligns the image and text side by side */
+    align-items: center; /* Centers the items vertically */
+    justify-content: space-around; /* Distributes extra space around items */
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .about-me-image {
+    flex: 1; /* Assigns a flex-grow value */
+    padding: 10px;
+  }
+  
+  .about-me-image img {
+    width: 200px; /* Adjust this as needed */
+    height: 200px; /* Adjust this to be equal to the width for a perfect circle */
+    border-radius: 50%; /* This makes the image circular */
+    object-fit: cover; /* This will cover the area without stretching the image */
+  }
+  
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Ensures that there's no default margin applied */
+  }
+  
+  .social-icons a {
+    color: #2a2a2a; /* Replace with your default icon color */
+    font-size: 24px; /* Size of the icons */
+    padding: 8px; /* Space around the icons */
+    margin: 0 10px; /* Space between the icons */
+    text-decoration: none; /* Removes the underline from the icons */
+    transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
+  }
+  
+  .social-icons a:hover {
+    color: #009688; /* Replace with your website's hover color */
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .social-icons a {
+      font-size: 20px; /* Smaller icon size for mobile screens */
+      padding: 4px; /* Smaller padding for icons */
+      margin: 0 5px; /* Smaller margin between icons */
     }
-}
-
-/* Skills Section */
-/* ... (Your existing CSS for other sections) ... */
+  }
+  
+  
 
 /* Skills Section */
 #skills {
@@ -155,8 +158,8 @@ body {
     padding: 60px 20px 20px; /* Top padding increased */
     text-align: center;
     padding-top:290px; /* Adjust this value if your header is taller */
-    padding-bottom: 100px; /* Provides space below the skills section */
-    margin-top: 100px; /* Increased top padding, adjust to match your navbar height */
+    padding-bottom: 50px; /* Provides space below the skills section */
+    margin-top: 50px; /* Increased top padding, adjust to match your navbar height */
     border-top: 1px solid #f4f4f4; /* Top border for visual separation (optional) */
     border-bottom: 1px solid #f4f4f4; /* Bottom border for visual separation (optional) */
 }
@@ -197,22 +200,14 @@ body {
     font-size: 1.1rem; /* Text font size */
 }
 
-/* ... (Your existing CSS for other sections) ... */
-
-
-
-/* ... (Your existing CSS for other sections) ... */
-
-
-
 /* Projects Section */
 #projects {
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Align content to the top */
     align-items: center;
-    min-height: 100vh;
-    padding: 100px 2rem 2rem; /* Increased padding-top to 100px */
+    min-height: 50vh;
+    padding: 50px 2rem 2rem; /* Increased padding-top to 100px */
     background-color: #fff;
     text-align: center;
     margin-top: -50px; /* Negative margin to pull the section up to the navbar's bottom */
@@ -272,6 +267,7 @@ body {
     background-color: #007bff;
     color: white;
 }
+
 
 /* Contact Section Styles */
 #contact {
