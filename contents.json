@@ -1,5 +1,17 @@
 {
   "projects": [
+    {
+        "title": "My Little Pony: A New Generation ",
+        "description": "Helped develop artist tools and pipelines for production using Python and optimized pipeline for the movie.",
+        "image": "assets/MLP.jpeg",
+        "link": "https://www.youtube.com/watch?v=J2I5HtYlwrQ&ab_channel=MyLittlePonyOfficial"
+    },
+    {
+        "title": "Garfield",
+        "description": "Helped develop artist tools and pipelines for production using Python and optimized pipeline for the movie.",
+        "image": "assets/Garfield.png",
+        "link": "https://www.youtube.com/watch?v=IeFWNtMo1Fs&t=50s&ab_channel=SonyPicturesEntertainment"
+    },
       {
           "title": "BookStore-CLI",
           "description": "A console-based Python application for managing a collection of books. It allows users to add, list, mark books as read, and delete books.",
