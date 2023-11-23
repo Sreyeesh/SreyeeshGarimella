@@ -1,86 +1,88 @@
 {
-  "projects": [
-    {
-        "title": "My Little Pony: A New Generation ",
+    "projects": [
+      {
+        "title": "My Little Pony: A New Generation",
         "description": "Helped develop artist tools and pipelines for production using Python and optimized pipeline for the movie.",
         "image": "assets/MLP.jpeg",
         "link": "https://www.youtube.com/watch?v=J2I5HtYlwrQ&ab_channel=MyLittlePonyOfficial"
-    },
-    {
+      },
+      {
         "title": "Garfield",
         "description": "Helped develop artist tools and pipelines for production using Python and optimized pipeline for the movie.",
         "image": "assets/Garfield.jpeg",
         "link": "https://www.youtube.com/watch?v=IeFWNtMo1Fs&t=50s&ab_channel=SonyPicturesEntertainment"
-    },
-      {
-          "title": "BookStore-CLI",
-          "description": "A console-based Python application for managing a collection of books. It allows users to add, list, mark books as read, and delete books.",
-          "image": "assets/BookStore_CLI.png",
-          "link": "https://github.com/sreyeesh/BookStore-CLI"
       },
       {
-          "title": "Movie Tracker CLI",
-          "description": "A command-line interface tool for creating personalized movie suggestions.",
-          "image": "assets/MovieTrackerPython.png",
-          "link": "https://github.com/Sreyeesh/Movie-Tracker-CLI"
+        "title": "BookStore-CLI",
+        "description": "A console-based Python application for managing a collection of books. It allows users to add, list, mark books as read, and delete books.",
+        "image": "assets/BookStore_CLI.png",
+        "link": "https://github.com/sreyeesh/BookStore-CLI"
       },
       {
-          "title": "Technical Documentation Page",
-          "description": "A technical documentation page, showcasing documentation skills and design layout.",
-          "image": "assets/TechnicalDocumentation.png",
-          "link": "https://github.com/sreyeesh/Technical-Documentation"
+        "title": "Movie Tracker CLI",
+        "description": "A command-line interface tool for creating personalized movie suggestions.",
+        "image": "assets/MovieTrackerPython.png",
+        "link": "https://github.com/Sreyeesh/Movie-Tracker-CLI"
       },
       {
-          "title": "Linus Tribute Page",
-          "description": "A tribute page dedicated to Linus Torvalds, showcasing design and layout skills.",
-          "image": "assets/LinusTributePage.png",
-          "link": "https://github.com/sreyeesh/Linus-Tribute-Page"
+        "title": "Technical Documentation Page",
+        "description": "A technical documentation page, showcasing documentation skills and design layout.",
+        "image": "assets/TechnicalDocumentation.png",
+        "link": "https://github.com/sreyeesh/Technical-Documentation"
+      },
+      {
+        "title": "Linus Tribute Page",
+        "description": "A tribute page dedicated to Linus Torvalds, showcasing design and layout skills.",
+        "image": "assets/LinusTributePage.png",
+        "link": "https://github.com/sreyeesh/Linus-Tribute-Page"
       }
-  ],
-  "skills": [
+    ],
+    "skills": [
       {
-          "name": "Python",
-          "iconClass": "fab fa-python"
+        "name": "Python",
+        "iconClass": "fab fa-python"
       },
       {
-          "name": "JavaScript",
-          "iconClass": "fab fa-js-square"
+        "name": "JavaScript",
+        "iconClass": "fab fa-js-square"
       },
       {
-          "name": "HTML",
-          "iconClass": "fab fa-html5"
+        "name": "HTML",
+        "iconClass": "fab fa-html5"
       },
       {
-          "name": "CSS",
-          "iconClass": "fab fa-css3-alt"
+        "name": "CSS",
+        "iconClass": "fab fa-css3-alt"
       },
       {
-          "name": "React",
-          "iconClass": "fab fa-react"
+        "name": "React",
+        "iconClass": "fab fa-react"
       },
       {
-          "name": "Docker",
-          "iconClass": "fab fa-docker"
+        "name": "Docker",
+        "iconClass": "fab fa-docker"
       },
       {
-          "name": "Kubernetes",
-          "iconClass": "fab fa-kubernetes"
+        "name": "Kubernetes",
+        "iconClass": "fab fa-kubernetes",
+        "logo": "https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.svg"
       },
       {
-          "name": "AWS",
-          "iconClass": "fab fa-aws"
+        "name": "AWS",
+        "iconClass": "fab fa-aws"
       },
       {
-          "name": "Ansible",
-          "iconClass": "fas fa-server" 
+        "name": "Ansible",
+        "iconClass": "fas fa-server"
       },
       {
-          "name": "Linux Administration",
-          "iconClass": "fab fa-linux"
+        "name": "Linux ",
+        "iconClass": "fab fa-linux"
       },
       {
-          "name": "Bash Scripting",
-          "iconClass": "fas fa-terminal" 
+        "name": "Bash",
+        "iconClass": "fas fa-terminal"
       }
-  ]
-}
+    ]
+  }
+  
