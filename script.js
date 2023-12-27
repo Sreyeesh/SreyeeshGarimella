@@ -1,83 +1,72 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Hamburger menu functionality
-    var hamburger = document.querySelector('#navbar .hamburger');
-    var menuItems = document.querySelectorAll('#navbar a');
-
-    // Function to show/hide menu items
-    function toggleMenuItems(displayStyle) {
-        menuItems.forEach(function(item) {
-            item.style.display = displayStyle;
-        });
-    }
-
-    // Toggle display of menu items on hamburger click
-    hamburger.addEventListener('click', function() {
-        menuItems.forEach(function(item) {
-            item.style.display = item.style.display === 'block' ? 'none' : 'block';
-        });
-    });
-
-    // Adjust menu visibility based on window width
-    function adjustMenuForWindowSize() {
-        if (window.innerWidth > 768) {
-            toggleMenuItems('block'); // Show menu items in full page view
-        } else {
-            toggleMenuItems('none'); // Hide menu items in mobile view
-        }
-    }
-
-    window.addEventListener('resize', adjustMenuForWindowSize);
-    adjustMenuForWindowSize(); // Initial adjustment on page load
-
-    // Fetching and displaying projects and skills
-    fetch('contents.json')
+document.addEventListener("DOMContentLoaded", function () {
+    fetch('config.json')
         .then(response => response.json())
-        .then(data => {
-            const projectsContainer = document.getElementById('projects-container');
-            if (projectsContainer && data.projects) {
-                data.projects.forEach(project => {
-                    const projectElement = document.createElement('div');
-                    projectElement.className = 'project-tile';
-                    projectElement.innerHTML = `
-                        <img src="${project.image}" alt="${project.title}">
-                        <h3>${project.title}</h3>
-                        <p>${project.description}</p>
-                        <a href="${project.link}" target="_blank">View Project</a>
-                    `;
-                    projectsContainer.appendChild(projectElement);
-                });
-            }
+        .then(resumeData => {
+            // Populate profile picture
+            document.getElementById('profile-picture').src = resumeData.profilePicture;
 
-            // Dynamically load the Skills section with Font Awesome icons
-            const skillsContainer = document.getElementById('skills-container');
-            if (skillsContainer && data.skills) {
-                data.skills.forEach(skill => {
-                    const skillElement = document.createElement('div');
-                    skillElement.className = 'skill-item';
+            // Populate contact information
+            const contactInfoElement = document.getElementById('contact-info');
+            Object.keys(resumeData.contact).forEach(key => {
+                const p = document.createElement('p');
+                p.innerHTML = `<i class="fas fa-${key}"></i> ${resumeData.contact[key]}`;
+                contactInfoElement.appendChild(p);
+            });
 
-                    const iconElement = document.createElement('i');
-                    iconElement.className = skill.iconClass; // Font Awesome class
+            // Populate name and title
+            document.getElementById('name').textContent = resumeData.name;
+            document.getElementById('title').textContent = resumeData.title;
 
-                    const skillName = document.createTextNode(` ${skill.name}`);
-                    
-                    skillElement.appendChild(iconElement);
-                    skillElement.appendChild(skillName);
-                    skillsContainer.appendChild(skillElement);
-                });
-            }
+            // Populate bio text
+            const bioElement = document.querySelector('.header');
+            const bioTextElement = document.createElement('p');
+            bioTextElement.className = 'bio';
+            bioTextElement.textContent = resumeData.bio;
+            bioElement.appendChild(bioTextElement);
+
+            // Populate skills, education, experience, languages
+            populateList('skills-list', resumeData.skills);
+            populateEducation('education-list', resumeData.education);
+            populateList('languages-list', resumeData.languages);
+            populateExperience('experience-list', resumeData.experience);
         })
         .catch(error => {
-            console.error('Error loading content:', error);
+            console.error('Could not load the resume data:', error);
         });
-});
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+    function populateList(listId, items) {
+        const listElement = document.getElementById(listId);
+        items.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            listElement.appendChild(li);
         });
-    });
-});
+    }
 
+    function populateEducation(listId, educationEntries) {
+        const listElement = document.getElementById(listId);
+        educationEntries.forEach(entry => {
+            const li = document.createElement('li');
+            li.innerHTML = `<strong>${entry.degree}</strong> - ${entry.institution}, ${entry.year}`;
+            listElement.appendChild(li);
+        });
+    }
+
+    function populateExperience(listId, experienceEntries) {
+        const listElement = document.getElementById(listId);
+        experienceEntries.forEach(entry => {
+            const div = document.createElement('div');
+            div.className = 'job';
+            div.innerHTML = `
+                <h3>${entry.title}</h3>
+                <p class="company">${entry.company}</p>
+                <p class="years">${entry.years}</p>
+                <ul>${entry.details.map(detail => `<li>${detail}</li>`).join('')}</ul>`;
+            listElement.appendChild(div);
+
+            // Add the horizontal rule below each job entry
+            const hr = document.createElement('hr');
+            listElement.appendChild(hr);
+        });
+    }
+});

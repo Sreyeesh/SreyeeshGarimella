@@ -1,365 +1,200 @@
-/* Basic Reset and Body Styles */
+/* Reset some default styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+body, html {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-    scroll-behavior: smooth; /* Enables smooth scrolling */
+    background: #f4f4f4;
 }
 
-/* Navbar Styles */
-#navbar {
+/* Main layout styling */
+.resume-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #fff;
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-logo {
-    height: 50px;
-    margin-right: 20px;
-}
-
-.hamburger {
-    display: none;
-    cursor: pointer;
-    font-size: 24px;
-    color: #333;
-}
-
-/* Navigation Links */
-#navbar a {
-    color: #333;
-    text-decoration: none;
-    padding: 0.5rem;
-    display: block;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-#navbar a:hover {
-    color: #007bff;
-    text-decoration: underline;
-}
-
-/* Responsive Navbar Adjustments for Mobile View */
-@media (max-width: 768px) {
-    #navbar {
-        justify-content: space-between;
-    }
-
-    .navbar-logo {
-        order: 2;
-        margin-left: auto;
-        margin-right: 20px;
-    }
-
-    .hamburger {
-        order: 1;
-        display: block;
-    }
-
-    /* Adjusting font size and padding for navbar links */
-    #navbar a {
-        font-size: 12px; /* Reduced font size */
-        padding: 5px; /* Reduced padding */
-    }
-
-    /* Displaying links in a row instead of stacking */
-    #navbar {
-        flex-wrap: wrap; /* Allow navbar items to wrap */
-    }
-
-    #navbar a {
-        display: inline-block; /* Display links inline */
-        margin-right: 10px; /* Add some margin to separate the links */
-    }
-}
-
-#about-me {
-    display: flex;
-    padding-top:100px;
-    margin-top:100px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    /* padding: 20px; */
-  }
-  
-  .about-me-content {
-    display: flex;
-    flex-direction: row; /* Aligns the image and text side by side */
-    align-items: center; /* Centers the items vertically */
-    justify-content: space-around; /* Distributes extra space around items */
-    max-width: 800px;
-    margin: auto;
-  }
-  
-  .about-me-image {
-    flex: 1; /* Assigns a flex-grow value */
-    padding: 10px;
-  }
-  
-  .about-me-image img {
-    width: 200px; /* Adjust this as needed */
-    height: 200px; /* Adjust this to be equal to the width for a perfect circle */
-    border-radius: 50%; /* This makes the image circular */
-    object-fit: cover; /* This will cover the area without stretching the image */
-  }
-  
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0; /* Ensures that there's no default margin applied */
-  }
-  
-  .social-icons a {
-    color: #2a2a2a; /* Replace with your default icon color */
-    font-size: 24px; /* Size of the icons */
-    padding: 8px; /* Space around the icons */
-    margin: 0 10px; /* Space between the icons */
-    text-decoration: none; /* Removes the underline from the icons */
-    transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
-  }
-  
-  .social-icons a:hover {
-    color: #009688; /* Replace with your website's hover color */
-  }
-  
-  @media only screen and (max-width: 768px) {
-    .social-icons a {
-      font-size: 20px; /* Smaller icon size for mobile screens */
-      padding: 4px; /* Smaller padding for icons */
-      margin: 0 5px; /* Smaller margin between icons */
-    }
-  }
-  
-  
-
-/* Skills Section */
-#skills {
-    background-color: #ffffff; /* Adjust the background color if needed */
-    padding: 60px 20px 20px; /* Top padding increased */
-    text-align: center;
-    padding-top:290px; /* Adjust this value if your header is taller */
-    padding-bottom: 50px; /* Provides space below the skills section */
-    margin-top: 50px; /* Increased top padding, adjust to match your navbar height */
-    border-top: 1px solid #f4f4f4; /* Top border for visual separation (optional) */
-    border-bottom: 1px solid #f4f4f4; /* Bottom border for visual separation (optional) */
-}
-#skills h2 {
-    color: #333; /* Color for the heading */
-    margin-bottom: 40px; /* Space below the heading */
-    font-size: 2rem; /* Font size for the heading */
-}
-
-#skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.skill-item {
-    flex: 1 1 200px; /* Flexible basis for each item */
-    background-color: #f4f4f4; /* Background color for skill items */
-    padding: 30px; /* Padding inside skill items */
-    border-radius: 10px; /* Rounded corners for skill items */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
-    text-align: center;
-    max-width: 300px; /* Maximum width for skill items */
-}
-
-.skill-item i {
-    font-size: 35px; /* Icon size */
-    color: #007bff; /* Icon color */
-    margin-bottom: 15px; /* Space between icon and text */
-}
-
-.skill-item span {
-    display: block;
-    color: #333; /* Text color */
-    font-size: 1.1rem; /* Text font size */
-}
-
-/* Projects Section */
-#projects {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Align content to the top */
-    align-items: center;
-    min-height: 50vh;
-    padding: 50px 2rem 2rem; /* Increased padding-top to 100px */
-    background-color: #fff;
-    text-align: center;
-    margin-top: -50px; /* Negative margin to pull the section up to the navbar's bottom */
-    padding-top: 200px; /* Increase this value to push the header down */
-}
-
-#projects h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-#projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1rem;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.project-tile {
-    flex: 1 1 calc(33.33% - 1rem);
-    background: #e8e8e8;
-    padding: 1rem;
-    border-radius: 5px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    margin-bottom: 1rem;
-}
-
-.project-tile img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-    margin-bottom: 1rem;
-}
-
-.project-tile:hover,
-.project-tile:hover a {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.project-tile a {
-    display: block;
-    background-color: transparent;
-    color: #007bff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border: 2px solid #007bff;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    margin-top: 10px;
-}
-
-.project-tile a:hover {
-    background-color: #007bff;
-    color: white;
-}
-
-
-/* Contact Section Styles */
-#contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-    background-color: #f4f4f4;
-    text-align: center;
-    /* Additional styles if needed */
-}
-
-#contact h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-#contact form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    width: 100%;
-    margin: auto;
+/* Sidebar styling */
+.sidebar {
+    background: #000;
+    color: #fff;
     padding: 20px;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-.form-group {
+    width: 280px;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+}
+
+.sidebar .profile-picture {
+    width: 200px;
+    height: 200px;
     margin-bottom: 20px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contact info styling with increased spacing */
+.sidebar .contact-info p {
+    font-size: 14px;
+    margin-bottom: 15px; /* Increased margin for more spacing */
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .contact-info p i {
+    margin-right: 10px;
+}
+
+/* Apply margin-top to the phone number element */
+.sidebar .contact-info p .fa-phone {
+    margin-top: 10px; /* Adjust the margin-top as needed */
+}
+
+/* Sidebar section headers styling */
+.sidebar h3 {
+    font-size: 18px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+/* Sidebar skills list styling */
+.sidebar .skills ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.sidebar .skills li {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+/* Main content styling */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background: #fff;
+}
+
+.main-content hr {
+    border: 1px solid #fff; /* Border style for the <hr> element */
+    margin-top: 20px; /* Adjust the margin-top as needed */
+    margin-bottom: 20px; /* Adjust the margin-bottom as needed */
     width: 100%;
 }
 
-.form-group label {
+/* Header styling */
+.main-content .header h1 {
+    font-size: 36px;
+    font-weight: bold;
     margin-bottom: 5px;
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
+.main-content .header h2 {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 20px;
 }
 
-.form-group textarea {
-    height: 150px;
-    resize: vertical;
+.main-content .header p {
+    margin-bottom: 30px;
 }
 
-#contact button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    align-self: center;
-}
-
-#contact button:hover {
-    background-color: #0056b3;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #f4f4f4;
-    padding: 20px;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.footer-logo {
-    height: 50px;
+/* Experience section styling */
+.main-content .experience h2 {
+    font-size: 18px;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
-footer p {
+.main-content .experience .job-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Add margin to create spacing between job entries */
+.main-content .experience .job {
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+.main-content .experience .job .company {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.main-content .experience .job .years {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Remove bullet points from the Education and Language sections */
+.main-content .education ul,
+.main-content .languages ul {
+    list-style-type: none;
     margin: 0;
-    font-size: 1rem;
+    padding: 0;
+}
+
+/* Re-add list style for experience section */
+.main-content .experience ul {
+    list-style-type: circle; /* Add bullet style */
+    padding-left: 20px; /* Add padding */
+}
+
+/* Style the Experience section title */
+.main-content .experience h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Style the Experience section HR (horizontal rule) */
+.main-content .experience hr {
+    border: none; /* Remove the default border */
+    border-top: 1px solid #999; /* Add a thin grey border to the top */
+    margin-top: 20px; /* Adjust the margin-top as needed */
+    margin-bottom: 20px; /* Adjust the margin-bottom as needed */
+    width: 100%;
+}
+
+/* Style the <hr> element below the "Languages" heading */
+.languages h3 + hr {
+    border: 1px solid #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+/* Style the "Download Resume as PDF" button with reduced size */
+.sidebar #download-pdf-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 5px 10px; /* Reduced padding */
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px; /* Reduced font size */
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.sidebar #download-pdf-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }

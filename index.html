@@ -2,101 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Sreyeesh Garimella</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
     <link rel="stylesheet" href="styles.css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
 <body>
+    <div class="resume-container">
+        <aside class="sidebar">
+            <img id="profile-picture" alt="Profile Picture" class="profile-picture">
 
-    <!-- Navbar -->
-    <nav id="navbar">
-        <a href="index.html">
-            <img src="assets/SGLogo.png" alt="SG Logo" class="navbar-logo">
-        </a>
-        <a href="#about-me">About Me</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact Me</a>
-        <div class="hamburger">&#9776;</div>
-    </nav>
+            <div id="contact-info" class="contact-info">
+                <!-- Contact info will be loaded here -->
+            </div>
 
- 
-    <section id="about-me">
-        <div class="about-me-content">
-            <div class="about-me-image">
-                <img src="assets/sgarimellaprofile.jpg" alt="Sreyeesh Garimella">
-                <!-- Social Icons with Font Awesome -->
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/sreyeeshgarimella" target="_blank" title="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/Sreyeesh" target="_blank" title="GitHub Profile">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="assets/Sreyeesh_Garimella_DevOps.pdf" download="Sreyeesh_Garimella_DevOps.pdf" title="Download CV">
-                        <i class="fas fa-file-pdf"></i>
-                    </a>
-                </div>
+            <div id="skills" class="skills">
+                <h3>Skills</h3>
+                <ul id="skills-list">
+                    <!-- Skills will be loaded here -->
+                </ul>
             </div>
-            <div class="about-me-text">
-                <h2>About Me</h2>
-                <p>I'm Sreyeesh Garimella, a dedicated developer with a passion for creating innovative solutions. With expertise in various technologies, I'm committed to building applications that make a difference.</p>
+            <div id="education" class="education">
+                <h3>Education</h3>
+                <ul id="education-list">
+                    <!-- Education items will be populated here -->
+                </ul>
             </div>
-        </div>
-    </section>
     
-
-
-<section id="skills">
-    <h2>My Skills</h2>
-    <div id="skills-container">
-        <!-- Skills will be loaded here -->
+            <div id="languages" class="languages">
+                <h3>Languages</h3>
+                <ul id="languages-list">
+                    <!-- Language items will be populated here -->
+                </ul>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <h1 id="name"> <!-- Name will be loaded here --> </h1>
+                <h2 id="title"> <!-- Title will be loaded here --> </h2>
+                <!-- Bio text will be loaded here -->
+            </header>
+            <section id="experience" class="experience">
+                <h3>Experience</h3>
+                <hr> <!-- Move the <hr> element here to position it under the section title -->
+                <div id="experience-list">
+                    <!-- Experience will be loaded here -->
+                </div>
+            </section>
+            
+            <!-- Additional sections if any will go here -->
+        </main>
     </div>
-</section>
-
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div id="projects-container">
-            <!-- Project tiles will be loaded here -->
-        </div>
-    </section>
-
-    <!-- Contact Me Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="https://formspree.io/f/mzblqvkl" method="POST">
-            <div class="form-group">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="message">Your Message:</label>
-                <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
-            </div>
-
-            <button type="submit">Send</button>
-        </form>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <img src="assets/SGLogo.png" alt="SG Logo" class="footer-logo">
-            <p>&copy; 2023 Sreyeesh Garimella All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </body>
 </html>

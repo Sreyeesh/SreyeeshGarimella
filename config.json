@@ -1,0 +1,99 @@
+{
+    "profilePicture": "assets/sgarimellaprofile.jpg",
+    "contact": {
+      "phone": "+372-5827-7155",
+      "email": "sgarime1@gmail.com",
+      "globe": "jamie-portfolio.com"
+    },
+    "name": "Sreyeesh Garimella",
+    "title": "FullStack Developer",
+    "bio": "I am a qualified and professional web developer with five years of experience in database administration and website design. Strong creative and analytical skills. Team player with an eye for detail.",
+    "skills": [
+      "Front-End & Full-Stack Development",
+      "Vue.js",
+      "JavaScript (ES6+)",
+      "Node.js",
+      "Express.js",
+      "MySQL Database Management",
+      "HTML5",
+      "CSS3",
+      "Responsive Web Design",
+      "Web App and Dashboard Design",
+      "RESTful API Development",
+      "Problem Solving",
+      "Agile Methodologies",
+      "Team Collaboration"
+    ],
+    "education": [
+      {
+        "institution": "California State Northridge",
+        "year": "2010-2012",
+        "degree": "Bachelor of Art in Animation"
+      }
+    ],
+    "experience": [
+      {
+        "title": "FullStack Developer",
+        "company": "SGPRODUCTIONOU - Estonia",
+        "years": "July 2022 - Present",
+        "details": [
+          "Mainly work with Vue.js for front-end development and Node.js/Express.js for the backend.",
+          "Utilize MySQL for database management and design.",
+          "Design and develop web apps and dashboards tailored to client needs.",
+          "Solve complex development issues and optimize workflows.",
+          "Collaborate in Agile teams, contributing both independently and collaboratively."
+        ]
+      },
+      {
+        "title": "FullStack Developer",
+        "company": "Kavaleer Productions",
+        "location": "Dublin, County Dublin, Ireland · Remote",
+        "years": "Mar 2023 - Aug 2023 · 6 mos",
+        "details": [
+          "Developed Javascript productivity plugins for Adobe Creative Suite.",
+          "Set up and tailored Shotgrid tracking software to the specific needs of production leadership.",
+          "Developed production workflow infrastructure for the company to use Shotgrid, Jira, and Confluence.",
+          "Set up Bitbucket for the company to manage the codebase from scratch.",
+          "Implemented Vue.js and Node.js solutions for various projects."
+        ]
+      },
+      {
+        "title": "FullStack Developer",
+        "company": "Blizzard Entertainment - Los Angeles, California",
+        "years": "May 2021 - Nov 2021",
+        "details": [
+          "Focused on software management for Overwatch 2, World of Warcraft, Diablo IV using Vue.js, Node.js, and Express.js.",
+          "Optimized production pipelines with Jenkins and GitLab.",
+          "Implemented AWS Cloud Rendering for faster data production.",
+          "Utilized Elastic Stack for data retrieval.",
+          "Automated workflows with Python and shell scripts.",
+          "Collaborated closely with other developers on Vue.js components."
+        ]
+      },
+      {
+        "title": "FullStack Developer",
+        "company": "Boulder Media - Dublin, Ireland",
+        "years": "Nov 2019 - Jan 2021",
+        "details": [
+          "Support staff using Linux while also developing Python scripts for data.",
+          "Manage render workflows and pipelines using Jenkins and GitLab.",
+          "Monitor infrastructure with Grafana and utilize real-time data for optimization.",
+          "Retrieve data for production and stakeholders using Elastic Search.",
+          "Developed Node.js and Express.js APIs for data retrieval and processing."
+        ]
+      },
+      {
+        "title": "FullStack Developer",
+        "company": "Walt Disney Animation Studios - Burbank, California",
+        "years": "Jul 2019 - Aug 2019",
+        "details": [
+          "Create Python tools for production and provide Linux-based support.",
+          "Assist in maintaining CI/CD pipelines using Jenkins and manage code with GitLab.",
+          "Monitor internal networks and data flow with Grafana.",
+          "Contributed to the development of Vue.js applications for internal use."
+        ]
+      }
+    ],
+    "languages": ["English"]
+  }
+  
