@@ -57,6 +57,16 @@ body, html {
     margin-top: 10px; /* Adjust the margin-top as needed */
 }
 
+/* Style the email link */
+.contact-email {
+    color: #fff; /* Set the text color to white */
+    text-decoration: none; /* Remove underlines */
+}
+
+.contact-email:hover {
+    text-decoration: underline; /* Add underline on hover (optional) */
+}
+
 /* Sidebar section headers styling */
 .sidebar h3 {
     font-size: 18px;
@@ -173,7 +183,7 @@ body, html {
 .languages h3 + hr {
     border: 1px solid #fff;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin_bottom: 10px;
     width: 100%;
 }
 

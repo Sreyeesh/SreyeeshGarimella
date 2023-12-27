@@ -9,7 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
             const contactInfoElement = document.getElementById('contact-info');
             Object.keys(resumeData.contact).forEach(key => {
                 const p = document.createElement('p');
-                p.innerHTML = `<i class="fas fa-${key}"></i> ${resumeData.contact[key]}`;
+                if (key === 'envelope') {
+                    // Make the email clickable using a mailto: link
+                    p.innerHTML = `<i class="fas fa-${key}"></i> <a class="contact-email" href="mailto:${resumeData.contact[key]}">${resumeData.contact[key]}</a>`;
+                } else {
+                    p.innerHTML = `<i class="fas fa-${key}"></i> ${resumeData.contact[key]}`;
+                }
                 contactInfoElement.appendChild(p);
             });
 
