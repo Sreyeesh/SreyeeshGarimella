@@ -7,8 +7,8 @@
       "link": "https://github.com/Sreyeesh",
       "icon": "fab fa-github"
     },
-    "pdfLink": "assets/SreyeeshGarimella_FullStackDev.pdf",
-    "pdfName": "SreyeeshGarimella_FullStackDev"
+    "linkedin": "https://www.linkedin.com/in/sreyeeshgarimella/",
+    "linkedinIcon": "fab fa-linkedin"
   },
   "name": "Sreyeesh Garimella",
   "title": "FullStack Developer",
@@ -28,20 +28,8 @@
     "Problem Solving",
     "Agile Methodologies",
     "Team Collaboration",
-    "Python Development",
-    "Django",
-    "Flask",
-    "AWS (Amazon Web Services)",
-    "Docker",
-    "Kubernetes",
-    "CI/CD Pipelines",
-    "Jenkins",
-    "Ansible",
-    "Terraform",
-    "Git & Version Control",
-    "Monitoring with Prometheus & Grafana",
-    "Elasticsearch, Logstash, & Kibana (ELK Stack)",
-    "Linux/Unix Administration"
+    "DevOps Skills",
+    "Python Development"
   ],
   "education": [
     {

@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById('profile-picture').src = resumeData.profilePicture;
             }
 
-            // Populate contact information with the GitHub link as text
+            // Populate contact information with the GitHub and LinkedIn links as text
             const contactInfoElement = document.getElementById('contact-info');
             Object.keys(resumeData.contact).forEach(key => {
                 const p = document.createElement('p');
@@ -22,17 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 } else if (key === 'github') {
                     iconHtml = `<i class="${resumeData.contact.github.icon}"></i>`;
                     valueHtml = `<a href="${resumeData.contact.github.link}" target="_blank" class="contact-link">${resumeData.contact.github.link}</a>`;
+                } else if (key === 'linkedin') {
+                    iconHtml = `<i class="${resumeData.contact.linkedinIcon}"></i>`;
+                    valueHtml = `<a href="${resumeData.contact.linkedin}" target="_blank" class="contact-link">${resumeData.contact.linkedin}</a>`;
                 }
                 p.innerHTML = `${iconHtml} ${valueHtml}`;
                 contactInfoElement.appendChild(p);
             });
-
-            // Set the href for the download button if the link is provided
-            if (resumeData.contact.pdfLink && document.querySelector('.download-button')) {
-                const downloadButton = document.querySelector('.download-button');
-                downloadButton.href = resumeData.contact.pdfLink;
-                downloadButton.download = resumeData.contact.pdfName || 'Resume';
-            }
 
             // Populate name and title
             document.getElementById('name').textContent = resumeData.name;
