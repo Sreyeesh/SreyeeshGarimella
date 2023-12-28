@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     valueHtml = `<a href="${resumeData.contact.github.link}" target="_blank" class="contact-link">${resumeData.contact.github.link}</a>`;
                 } else if (key === 'linkedin') {
                     iconHtml = `<i class="${resumeData.contact.linkedinIcon}"></i>`;
-                    valueHtml = `<a href="${resumeData.contact.linkedin}" target="_blank" class="contact-link">${resumeData.contact.linkedin}</a>`;
+                    valueHtml = `<a href="${resumeData.contact.linkedin}" target="_blank" class="contact-link">${resumeData.contact.linkedinText}</a>`;
                 }
                 p.innerHTML = `${iconHtml} ${valueHtml}`;
                 contactInfoElement.appendChild(p);

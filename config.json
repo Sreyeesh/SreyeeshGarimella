@@ -8,7 +8,8 @@
       "icon": "fab fa-github"
     },
     "linkedin": "https://www.linkedin.com/in/sreyeeshgarimella/",
-    "linkedinIcon": "fab fa-linkedin"
+    "linkedinIcon": "fab fa-linkedin",
+    "linkedinText": "LinkedIn Profile"
   },
   "name": "Sreyeesh Garimella",
   "title": "FullStack Developer",
