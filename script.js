@@ -3,31 +3,46 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json())
         .then(resumeData => {
             // Populate profile picture
-            document.getElementById('profile-picture').src = resumeData.profilePicture;
+            if (resumeData.profilePicture) {
+                document.getElementById('profile-picture').src = resumeData.profilePicture;
+            }
 
-            // Populate contact information
+            // Populate contact information with the GitHub link as text
             const contactInfoElement = document.getElementById('contact-info');
             Object.keys(resumeData.contact).forEach(key => {
                 const p = document.createElement('p');
-                if (key === 'envelope') {
-                    // Make the email clickable using a mailto: link
-                    p.innerHTML = `<i class="fas fa-${key}"></i> <a class="contact-email" href="mailto:${resumeData.contact[key]}">${resumeData.contact[key]}</a>`;
-                } else {
-                    p.innerHTML = `<i class="fas fa-${key}"></i> ${resumeData.contact[key]}`;
+                let iconHtml = '';
+                let valueHtml = '';
+                if (key === 'phone') {
+                    iconHtml = '<i class="fas fa-phone"></i>';
+                    valueHtml = resumeData.contact[key];
+                } else if (key === 'envelope') {
+                    iconHtml = '<i class="fas fa-envelope"></i>';
+                    valueHtml = `<a href="mailto:${resumeData.contact[key]}" class="contact-link">${resumeData.contact[key]}</a>`;
+                } else if (key === 'github') {
+                    iconHtml = `<i class="${resumeData.contact.github.icon}"></i>`;
+                    valueHtml = `<a href="${resumeData.contact.github.link}" target="_blank" class="contact-link">${resumeData.contact.github.link}</a>`;
                 }
+                p.innerHTML = `${iconHtml} ${valueHtml}`;
                 contactInfoElement.appendChild(p);
             });
+
+            // Set the href for the download button if the link is provided
+            if (resumeData.contact.pdfLink && document.querySelector('.download-button')) {
+                const downloadButton = document.querySelector('.download-button');
+                downloadButton.href = resumeData.contact.pdfLink;
+                downloadButton.download = resumeData.contact.pdfName || 'Resume';
+            }
 
             // Populate name and title
             document.getElementById('name').textContent = resumeData.name;
             document.getElementById('title').textContent = resumeData.title;
 
             // Populate bio text
-            const bioElement = document.querySelector('.header');
-            const bioTextElement = document.createElement('p');
-            bioTextElement.className = 'bio';
-            bioTextElement.textContent = resumeData.bio;
-            bioElement.appendChild(bioTextElement);
+            const bioElement = document.createElement('p');
+            bioElement.className = 'bio';
+            bioElement.textContent = resumeData.bio;
+            document.querySelector('.header').appendChild(bioElement);
 
             // Populate skills, education, experience, languages
             populateList('skills-list', resumeData.skills);
@@ -63,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const div = document.createElement('div');
             div.className = 'job';
             div.innerHTML = `
-                <h3>${entry.title}</h3>
+                <h4>${entry.title}</h4>
                 <p class="company">${entry.company}</p>
                 <p class="years">${entry.years}</p>
                 <ul>${entry.details.map(detail => `<li>${detail}</li>`).join('')}</ul>`;
